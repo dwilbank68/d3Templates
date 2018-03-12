@@ -199,14 +199,3 @@ function lineCallback (error, data) {
 //      curveCatmullRom - a cubic Catmull–Rom spline
 //      curveCatmullRomClosed - a closed cubic Catmull–Rom spline
 //      curveCatmullRomOpen - an open cubic Catmull–Rom spline
-
-d3.csv("nest.csv", function(error, csv_data) {
-    if (error) throw error;
-
-    var newData = d3.nest()
-                .key(d=> d.date)
-                .rollup(d => d3.sum(d, g => g.value))
-                .entries(csv_data)
-
-    console.log(newData);
-});

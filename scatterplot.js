@@ -7,8 +7,6 @@ let margin = {top: 20, right: 20, bottom: 30, left: 50},
 
 let dateParser = d3.timeParse("%d-%b-%y");  // 1
 
-
-
 let svg =
     d3.select("body")
         .append("svg")

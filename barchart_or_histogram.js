@@ -68,7 +68,7 @@ function barCallback (error, data) {
             .domain(xScale.domain())
             .thresholds(xScale.ticks(d3.timeMonth));    // 3.5
 
-    let bins = histogram(data);
+    let bins = histogram(data);                         // 3.7
 
     let yScale =
         d3.scaleLinear()
@@ -127,3 +127,4 @@ function barCallback (error, data) {
 // 2 -  rangeRound outputs whole numbers, to avoid pixel blur
 // 3 -  note the coordinate space is inverted on y axis
 // 3.5 -    timeWeek, timeDay, timeYear
+// 3.7 -    bins will now have x0, x1, and length properties
